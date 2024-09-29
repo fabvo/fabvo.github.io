@@ -6,20 +6,63 @@ body {
 
 .container {
     display: flex;
-    height: 100vh;
+    height: 100vh; 
 }
 
 .sidebar {
-    width: 300px;
+    width: 300px; 
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; 
+    border-right: 1px solid #ddd; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+    overflow-y: auto; 
 }
 
 #map {
-    flex: 1;
-    height: 100%;
+    flex: 1; 
+    height: 100%; 
 }
 
 h2 {
-    margin-top: 0;
+    margin-top: 0; 
+    color: #333; 
+}
+
+.sidebar select {
+    width: 100%; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+}
+
+.sidebar p {
+    font-size: 1em; 
+    margin: 5px 0; 
+    color: #666; 
+}
+
+.leaflet-tooltip {
+    background-color: transparent;
+    border: none; 
+    box-shadow: none; 
+    color: #333; 
+    font-weight: bold; 
+    font-size: 14px;
+}
+
+.leaflet-container a,
+.leaflet-container a:focus,
+.leaflet-container a:active,
+.leaflet-container path {
+    outline: none; 
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; 
+        height: auto; 
+        position: relative; 
+        border-right: none; 
+    }
 }
