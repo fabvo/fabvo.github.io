@@ -1,6 +1,37 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        <h1>Hello World</h1>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lärmpegel Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Leaflet.js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Lärmpegel Daten</h2>
+            <div id="country-name">Wählen Sie ein Land</div>
+            <div>
+                <label for="noise-range">Lärmpegelbereich wählen:</label>
+                <select id="noise-range">
+                    <option value="exposure_55_59">55 - 59 dB</option>
+                    <option value="exposure_60_64">60 - 64 dB</option>
+                    <option value="exposure_65_69">65 - 69 dB</option>
+                    <option value="exposure_70_74">70 - 74 dB</option>
+                    <option value="exposure_greater_75">> 75 dB</option>
+                </select>
+            </div>
+            <div id="noise-data">Prozent: --</div>
+            <div id="noise-impact">Auswirkung: --</div>
+        </div>
+        <!-- Map -->
+        <div id="map"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
