@@ -12,10 +12,10 @@ fetch('data/europe.geojson')
     .then(geojsonData => {
         L.geoJson(geojsonData, {
             onEachFeature: function (feature, layer) {
-                // Summe anzeigen
-                layer.bindTooltip(`${feature.properties.name}: ${getCountrySum(feature.properties.name)}%`);
+                // Land wird beim Klick ausgegeben
                 layer.on('click', function() {
-                    displayCountryData(feature.properties.name);
+                    console.log('Land angeklickt:', feature.properties.name);  // Hier wird der Name des Landes ausgegeben
+                    displayCountryData(feature.properties.name);  // Funktion zur Datenanzeige aufrufen
                 });
             }
         }).addTo(map);
