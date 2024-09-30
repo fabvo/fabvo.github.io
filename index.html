@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lärmpegel Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Leaflet.js -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-doughnutlabel@1.0.0/dist/chartjs-plugin-doughnutlabel.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <!-- Sidebar -->
         <div class="sidebar">
             <h2>Lärmpegel Daten</h2>
             <div id="country-name">Wählen Sie ein Land</div>
             <div>
                 <label for="noise-range">Lärmpegelbereich wählen:</label>
                 <select id="noise-range">
-                    <option value="">-- Bitte wählen --</option> <!-- Option zum Auswählen -->
+                    <option value="">-- Bitte wählen --</option> 
                     <option value="exposure_55_59">55 - 59 dB</option>
                     <option value="exposure_60_64">60 - 64 dB</option>
                     <option value="exposure_65_69">65 - 69 dB</option>
@@ -26,10 +26,10 @@
                     <option value="exposure_greater_75">> 75 dB</option>
                 </select>
             </div>
-            <div id="noise-data">Prozent: --</div>
-            <div id="noise-impact">Auswirkung: --</div>
+            <!-- <div id="noise-data">Prozent: --</div> -->
+
+            <canvas id="noiseChart" width="200" height="200"></canvas>
         </div>
-        <!-- Map -->
         <div id="map"></div>
     </div>
 

@@ -12,10 +12,11 @@ body {
 .sidebar {
     width: 300px; 
     padding: 20px;
-    background-color: #f4f4f4; 
+    background-color: #333; /* Dunkelgrauer Hintergrund */
+    color: white; /* Schriftfarbe auf weiß setzen für besseren Kontrast */
     border-right: 1px solid #ddd; 
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
-    overflow-y: auto; 
+    overflow-y: hidden; /* Scrollbar entfernen */
 }
 
 #map {
@@ -25,7 +26,7 @@ body {
 
 h2 {
     margin-top: 0; 
-    color: #333; 
+    color: #fff; /* Schriftfarbe des Titels */
 }
 
 .sidebar select {
@@ -39,7 +40,7 @@ h2 {
 .sidebar p {
     font-size: 1em; 
     margin: 5px 0; 
-    color: #666; 
+    color: #ccc; /* Helle Schriftfarbe für die Beschreibungen */
 }
 
 .leaflet-tooltip {
@@ -65,4 +66,9 @@ h2 {
         position: relative; 
         border-right: none; 
     }
+}
+
+canvas {
+    margin: 20px 0;
+    max-width: 100%;
 }
