@@ -16,20 +16,13 @@
             <h2>Lärmpegel Daten</h2>
             <div id="country-name">Wählen Sie ein Land auf der Karte</div>
             <div>
-                <label for="noise-range">Lärmpegelbereich wählen:</label>
-                <select id="noise-range">
-                    <option value="">-- Bitte wählen --</option> 
-                    <option value="exposure_55_59">55 - 59 dB</option>
-                    <option value="exposure_60_64">60 - 64 dB</option>
-                    <option value="exposure_65_69">65 - 69 dB</option>
-                    <option value="exposure_70_74">70 - 74 dB</option>
-                    <option value="exposure_greater_75">> 75 dB</option>
-                </select>
+                <label for="noise-range-slider">Lärmpegelbereich wählen:</label>
+                <input type="range" id="noise-range-slider" min="55" max="75" step="5" value="55">
+                <span id="slider-value">55 - 59 dB</span>
+                <p id="noise-example">Beispiele: Leise Gespräche, Hintergrundmusik</p>
             </div>
-            <!-- <div id="noise-data">Prozent: --</div> -->
-
             <canvas id="noiseChart" width="100" height="100"></canvas>
-        </div>
+        </div>                
         <div id="map"></div>
     </div>
 
